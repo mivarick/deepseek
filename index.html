@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Excel Assistant</title>
+    
+    <!-- Office JavaScript API -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles.css">
+    
+    <!-- jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>DeepSeek AI Assistant</h1>
+        
+        <div class="api-section">
+            <h3>API Configuration</h3>
+            <input type="password" id="apiKey" placeholder="Enter your DeepSeek API Key" />
+            <button onclick="saveApiKey()">Save API Key</button>
+        </div>
+        
+        <div class="chat-section">
+            <h3>Chat with DeepSeek</h3>
+            <div id="chatOutput" class="chat-output"></div>
+            <textarea id="userInput" placeholder="Ask DeepSeek about your data..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        
+        <div class="data-actions">
+            <h3>Data Analysis</h3>
+            <button onclick="analyzeSelectedData()">Analyze Selected Data</button>
+            <button onclick="summarizeData()">Summarize Data</button>
+            <button onclick="generateFormula()">Generate Formula</button>
+            <button onclick="cleanData()">Clean Data Suggestions</button>
+        </div>
+        
+        <div class="status" id="status"></div>
+    </div>
+    
+    <script src="src/app.js"></script>
+</body>
+</html>
